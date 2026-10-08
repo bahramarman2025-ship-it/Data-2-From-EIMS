@@ -1,0 +1,23 @@
+name: EIMS XLSX Transfer Artifact
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-xlsx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload original XLSX as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: eims-xlsx-transfer
+          path: "DATA- AMAR Tolid 1400-1405-Da.xlsx"
+          if-no-files-found: error
+          retention-days: 1
