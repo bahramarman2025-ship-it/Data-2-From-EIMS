@@ -14,10 +14,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload original XLSX as artifact
+      - name: Upload RooMizi workbook as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: eims-xlsx-transfer
-          path: "DATA- AMAR Tolid 1400-1405-Da.xlsx"
+          name: roomizi-projects-audits-xlsx
+          path: "Bank-Projects- Ausits-Roomizi.xlsx"
           if-no-files-found: error
-          retention-days: 1
+          retention-days: 7
